@@ -1,0 +1,7 @@
+rem Reset network Settings for static IP
+netsh interface ip set address name = "Ethernet" source = static addr = 192.168.0.17 mask = 255.255.255.0
+netsh interface ip add address name = "Ethernet" gateway = 192.168.0.1 gwmetric = 1
+netsh interface ip set dnsservers "Ethernet" static 192.168.0.1
+netsh interface ip set dnsservers "Ethernet" static 192.168.0.1
+netsh interface ip show config
+pause
